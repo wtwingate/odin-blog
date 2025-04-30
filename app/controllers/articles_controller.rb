@@ -44,6 +44,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.expect(article: [ :title, :body ])
+    params.expect(article: [ :title, :body, :status ])
   end
 end
