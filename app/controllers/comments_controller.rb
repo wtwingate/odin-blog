@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  allow_unauthenticated_access only: %i[ create ]
   before_action :set_article
 
   def create

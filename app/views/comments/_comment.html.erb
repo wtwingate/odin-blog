@@ -4,8 +4,10 @@
     <%= comment.body %>
   </p>
 
-  <%= link_to "Delete", [comment.article, comment], data: {
-    turbo_method: :delete,
-    turbo_confirm: "Are you sure?"
-  } %>
+  <% if authenticated? %>
+    <%= link_to "Delete", [comment.article, comment], data: {
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?"
+    } %>
+  <% end %>
 <% end %>
